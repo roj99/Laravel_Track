@@ -52,24 +52,25 @@ $students=[
     ]
 ];
 
-$total=count($students);
-for($i=0; $i<$total; $i++) {
-     $passedCount = 0;
+for($i=0 ; $i<5 ; $i++) {
+     $passedCount = 0;     //counting successful subject
     foreach($students[$i]["subjects"] as $subject=>$grade){
         if ($grade>= 60) 
          $passedCount++;
     }
       echo $students[$i]["first_name"]." ". $students[$i]["last_name"]." (passedCount is"." " .$passedCount.")".":";
+
+      //var_dump($students[$i]["first_name"], $students[$i]["last_name"],"(passedCount is"." " .$passedCount.")".":");
       
       switch ($passedCount) {
         case 0:
             echo "Failed All Subjects"."\n";
             break;
+             case 1:
+            echo "Passed One Subject"."\n";
+            break;
         case 2:
             echo "Passed Two Subjects"."\n";
-            break;
-        case 1:
-            echo "Passed One Subject"."\n";
             break;
         case 3:
             echo "All Subjects Passed"."\n";

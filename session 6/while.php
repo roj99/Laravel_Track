@@ -52,7 +52,7 @@ $students=[
     ]
 ];
 $i=0;
-while($i<count($students)){
+while($i<5){
 var_dump("id_stodent:".$students[$i]["student_id"]." is ".$students[$i]["first_name"]." ".$students[$i]["last_name"]) ;
 $i++;
 }

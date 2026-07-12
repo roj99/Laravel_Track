@@ -51,19 +51,19 @@ $students=[
         ]
     ]
 ];
-$total=count($students);
-for($i=0; $i<$total; $i++)
+
+for($i=0 ; $i<5 ; $i++)
     { $haspassed=false;
       $subjectList="";
     foreach($students[$i]["subjects"] as $subject=>$grade){
         if($grade>60){
               $subjectList .= $subject .":". $grade ."|";
              $haspassed=true;
+          //   var_dump( $subjectList);
         }
     }
-          if($haspassed)  
-     var_dump($students[$i]["first_name"]." ".$students[$i]["last_name"]." ".$subjectList);
-        
+    if($haspassed)  
+     var_dump($students[$i]["first_name"]." ".$students[$i]["last_name"]." ".$subjectList);  
      }
     
 

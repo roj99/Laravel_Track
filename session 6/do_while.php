@@ -54,12 +54,11 @@ $students=[
 
 $i = 0;
 do {
-    $student = $students[$i];
-    $sum = $student["subjects"]["Math"] + $student["subjects"]["Php"] + $student["subjects"]["English"];
-    $average = $sum /3;
-    var_dump($student["first_name"]."'s " ."average is:".$average) ;
+    $sum = $students[$i]["subjects"]["Math"] + $students[$i]["subjects"]["Php"] + $students[$i]["subjects"]["English"];
+    $average = $sum /3 ;
+    var_dump($students[$i]["first_name"]."'s " ."average is:".$average) ;
     $i++;
 } 
-while ($i<count($students));
+while ($i<5);
 
 ?>
